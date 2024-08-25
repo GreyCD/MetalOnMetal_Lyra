@@ -1,0 +1,56 @@
+// Fill out your copyright notice in the Description page of Project Settings.
+
+#pragma once
+
+#include "CoreMinimal.h"
+#include "Equipment/LyraGameplayAbility_FromEquipment.h"
+#include "Projectile/OnMetal_ProjectileDataAsset.h"
+
+#include "OnMetal_ProjectileAbility.generated.h"
+
+enum ECollisionChannel : int;
+
+class APawn;
+class UOnMetal_RangedWeaponInstance;
+class UObject;
+struct FCollisionQueryParams;
+struct FFrame;
+struct FGameplayAbilityActorInfo;
+struct FGameplayEventData;
+struct FGameplayTag;
+struct FGameplayTagContainer;
+
+class UOnMetal_ProjectileSubsystem;
+
+/**
+ * 
+ */
+UCLASS()
+class METALONMETALRUNTIME_API UOnMetal_ProjectileAbility : public ULyraGameplayAbility_FromEquipment
+{
+	GENERATED_BODY()
+
+public:
+	UOnMetal_ProjectileAbility(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get());
+
+	UFUNCTION(BlueprintCallable, Category="Lyra|Ability")
+	UOnMetal_RangedWeaponInstance* GetWeaponInstance() const;
+
+	//~UGameplayAbility interface
+	virtual bool CanActivateAbility(const FGameplayAbilitySpecHandle Handle, const FGameplayAbilityActorInfo* ActorInfo, const FGameplayTagContainer* SourceTags = nullptr, const FGameplayTagContainer* TargetTags = nullptr, OUT FGameplayTagContainer* OptionalRelevantTags = nullptr) const override;
+	virtual void ActivateAbility(const FGameplayAbilitySpecHandle Handle, const FGameplayAbilityActorInfo* ActorInfo, const FGameplayAbilityActivationInfo ActivationInfo, const FGameplayEventData* TriggerEventData) override;
+	virtual void EndAbility(const FGameplayAbilitySpecHandle Handle, const FGameplayAbilityActorInfo* ActorInfo, const FGameplayAbilityActivationInfo ActivationInfo, bool bReplicateEndAbility, bool bWasCancelled) override;
+	//~End of UGameplayAbility interface
+
+protected:
+	UFUNCTION(BlueprintCallable, Category = "OnMetal|Ability")
+	void FireProjectileWeapon(const FTransform& SpawnTransform, UOnMetal_ProjectileDataAsset* DataAsset);
+
+
+private:
+	UPROPERTY()
+	UOnMetal_ProjectileSubsystem* ProjectileSubsystem;
+
+	FDelegateHandle OnTargetDataReadyCallbackDelegateHandle;
+	
+};

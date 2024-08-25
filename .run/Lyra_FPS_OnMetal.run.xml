@@ -1,0 +1,711 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Lyra_FPS_OnMetal" type="Uproject" factoryName="rider.uproject">
+    <configuration_1>
+      <option name="CONFIGURATION" value="Debug Client" />
+      <option name="PLATFORM" value="Mac" />
+      <option name="PROJECT_FILE_PATH" value="$PROJECT_DIR$/Lyra_FPS_OnMetal.uproject" />
+      <option name="CURRENT_LAUNCH_PROFILE" value="Local" />
+      <option name="EXECUTABLE_PATH" value="J:\UDEV\Lyra_FPS_OnMetalX\Binaries\Mac\LyraClient-Mac-Debug.app/Contents/MacOS/LyraClient-Mac-Debug" />
+      <option name="MANDATORY_PROGRAM_PARAMETERS" value=" &quot;J:\UDEV\Lyra_FPS_OnMetalX\Lyra_FPS_OnMetal.uproject&quot;" />
+      <option name="CUSTOM_PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="J:\UE53SRC\UnrealEngine" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="TERMINAL_INTERACTION_BEHAVIOR" value="FORCE_CONSOLE" />
+    </configuration_1>
+    <configuration_2>
+      <option name="CONFIGURATION" value="Debug Client" />
+      <option name="PLATFORM" value="TVOS" />
+      <option name="PROJECT_FILE_PATH" value="$PROJECT_DIR$/Lyra_FPS_OnMetal.uproject" />
+      <option name="CURRENT_LAUNCH_PROFILE" value="Local" />
+      <option name="EXECUTABLE_PATH" value="J:\UDEV\Lyra_FPS_OnMetalX\Binaries\TVOS\LyraClient-TVOS-Debug" />
+      <option name="MANDATORY_PROGRAM_PARAMETERS" value=" &quot;J:\UDEV\Lyra_FPS_OnMetalX\Lyra_FPS_OnMetal.uproject&quot;" />
+      <option name="CUSTOM_PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="J:\UE53SRC\UnrealEngine" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="TERMINAL_INTERACTION_BEHAVIOR" value="FORCE_CONSOLE" />
+    </configuration_2>
+    <configuration_3>
+      <option name="CONFIGURATION" value="Debug Client" />
+      <option name="PLATFORM" value="Win64" />
+      <option name="PROJECT_FILE_PATH" value="$PROJECT_DIR$/Lyra_FPS_OnMetal.uproject" />
+      <option name="CURRENT_LAUNCH_PROFILE" value="Local" />
+      <option name="EXECUTABLE_PATH" value="J:\UDEV\Lyra_FPS_OnMetalX\Binaries\Win64\LyraClient-Win64-Debug.exe" />
+      <option name="MANDATORY_PROGRAM_PARAMETERS" value=" &quot;J:\UDEV\Lyra_FPS_OnMetalX\Lyra_FPS_OnMetal.uproject&quot;" />
+      <option name="CUSTOM_PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="J:\UE53SRC\UnrealEngine" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="TERMINAL_INTERACTION_BEHAVIOR" value="FORCE_CONSOLE" />
+    </configuration_3>
+    <configuration_4>
+      <option name="CONFIGURATION" value="Debug Editor" />
+      <option name="PLATFORM" value="Mac" />
+      <option name="PROJECT_FILE_PATH" value="$PROJECT_DIR$/Lyra_FPS_OnMetal.uproject" />
+      <option name="CURRENT_LAUNCH_PROFILE" value="Local" />
+      <option name="EXECUTABLE_PATH" value="J:\UE53SRC\UnrealEngine\Engine\Binaries\Mac\UnrealEditor-Mac-Debug.app/Contents/MacOS/UnrealEditor-Mac-Debug" />
+      <option name="MANDATORY_PROGRAM_PARAMETERS" value=" &quot;J:\UDEV\Lyra_FPS_OnMetalX\Lyra_FPS_OnMetal.uproject&quot;" />
+      <option name="CUSTOM_PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="J:\UE53SRC\UnrealEngine" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="TERMINAL_INTERACTION_BEHAVIOR" value="FORCE_CONSOLE" />
+    </configuration_4>
+    <configuration_5>
+      <option name="CONFIGURATION" value="Debug Editor" />
+      <option name="PLATFORM" value="TVOS" />
+      <option name="PROJECT_FILE_PATH" value="$PROJECT_DIR$/Lyra_FPS_OnMetal.uproject" />
+      <option name="CURRENT_LAUNCH_PROFILE" value="Local" />
+      <option name="EXECUTABLE_PATH" value="J:\UE53SRC\UnrealEngine\Engine\Binaries\TVOS\UnrealEditor-TVOS-Debug" />
+      <option name="MANDATORY_PROGRAM_PARAMETERS" value=" &quot;J:\UDEV\Lyra_FPS_OnMetalX\Lyra_FPS_OnMetal.uproject&quot;" />
+      <option name="CUSTOM_PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="J:\UE53SRC\UnrealEngine" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="TERMINAL_INTERACTION_BEHAVIOR" value="FORCE_CONSOLE" />
+    </configuration_5>
+    <configuration_6>
+      <option name="CONFIGURATION" value="Debug Editor" />
+      <option name="PLATFORM" value="Win64" />
+      <option name="PROJECT_FILE_PATH" value="$PROJECT_DIR$/Lyra_FPS_OnMetal.uproject" />
+      <option name="CURRENT_LAUNCH_PROFILE" value="Local" />
+      <option name="EXECUTABLE_PATH" value="J:\UE53SRC\UnrealEngine\Engine\Binaries\Win64\UnrealEditor-Win64-Debug.exe" />
+      <option name="MANDATORY_PROGRAM_PARAMETERS" value=" &quot;J:\UDEV\Lyra_FPS_OnMetalX\Lyra_FPS_OnMetal.uproject&quot;" />
+      <option name="CUSTOM_PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="J:\UE53SRC\UnrealEngine" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="TERMINAL_INTERACTION_BEHAVIOR" value="FORCE_CONSOLE" />
+    </configuration_6>
+    <configuration_7>
+      <option name="CONFIGURATION" value="Debug Server" />
+      <option name="PLATFORM" value="Mac" />
+      <option name="PROJECT_FILE_PATH" value="$PROJECT_DIR$/Lyra_FPS_OnMetal.uproject" />
+      <option name="CURRENT_LAUNCH_PROFILE" value="Local" />
+      <option name="EXECUTABLE_PATH" value="J:\UDEV\Lyra_FPS_OnMetalX\Binaries\Mac\LyraServer-Mac-Debug.app/Contents/MacOS/LyraServer-Mac-Debug" />
+      <option name="MANDATORY_PROGRAM_PARAMETERS" value=" &quot;J:\UDEV\Lyra_FPS_OnMetalX\Lyra_FPS_OnMetal.uproject&quot;" />
+      <option name="CUSTOM_PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="J:\UE53SRC\UnrealEngine" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="TERMINAL_INTERACTION_BEHAVIOR" value="FORCE_CONSOLE" />
+    </configuration_7>
+    <configuration_8>
+      <option name="CONFIGURATION" value="Debug Server" />
+      <option name="PLATFORM" value="TVOS" />
+      <option name="PROJECT_FILE_PATH" value="$PROJECT_DIR$/Lyra_FPS_OnMetal.uproject" />
+      <option name="CURRENT_LAUNCH_PROFILE" value="Local" />
+      <option name="EXECUTABLE_PATH" value="J:\UDEV\Lyra_FPS_OnMetalX\Binaries\TVOS\LyraServer-TVOS-Debug" />
+      <option name="MANDATORY_PROGRAM_PARAMETERS" value=" &quot;J:\UDEV\Lyra_FPS_OnMetalX\Lyra_FPS_OnMetal.uproject&quot;" />
+      <option name="CUSTOM_PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="J:\UE53SRC\UnrealEngine" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="TERMINAL_INTERACTION_BEHAVIOR" value="FORCE_CONSOLE" />
+    </configuration_8>
+    <configuration_9>
+      <option name="CONFIGURATION" value="Debug Server" />
+      <option name="PLATFORM" value="Win64" />
+      <option name="PROJECT_FILE_PATH" value="$PROJECT_DIR$/Lyra_FPS_OnMetal.uproject" />
+      <option name="CURRENT_LAUNCH_PROFILE" value="Local" />
+      <option name="EXECUTABLE_PATH" value="J:\UDEV\Lyra_FPS_OnMetalX\Binaries\Win64\LyraServer-Win64-Debug.exe" />
+      <option name="MANDATORY_PROGRAM_PARAMETERS" value=" &quot;J:\UDEV\Lyra_FPS_OnMetalX\Lyra_FPS_OnMetal.uproject&quot;" />
+      <option name="CUSTOM_PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="J:\UE53SRC\UnrealEngine" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="TERMINAL_INTERACTION_BEHAVIOR" value="FORCE_CONSOLE" />
+    </configuration_9>
+    <configuration_10>
+      <option name="CONFIGURATION" value="DebugGame Client" />
+      <option name="PLATFORM" value="Mac" />
+      <option name="PROJECT_FILE_PATH" value="$PROJECT_DIR$/Lyra_FPS_OnMetal.uproject" />
+      <option name="CURRENT_LAUNCH_PROFILE" value="Local" />
+      <option name="EXECUTABLE_PATH" value="J:\UDEV\Lyra_FPS_OnMetalX\Binaries\Mac\LyraClient-Mac-DebugGame.app/Contents/MacOS/LyraClient-Mac-DebugGame" />
+      <option name="MANDATORY_PROGRAM_PARAMETERS" value=" &quot;J:\UDEV\Lyra_FPS_OnMetalX\Lyra_FPS_OnMetal.uproject&quot;" />
+      <option name="CUSTOM_PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="J:\UE53SRC\UnrealEngine" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="TERMINAL_INTERACTION_BEHAVIOR" value="FORCE_CONSOLE" />
+    </configuration_10>
+    <configuration_11>
+      <option name="CONFIGURATION" value="DebugGame Client" />
+      <option name="PLATFORM" value="TVOS" />
+      <option name="PROJECT_FILE_PATH" value="$PROJECT_DIR$/Lyra_FPS_OnMetal.uproject" />
+      <option name="CURRENT_LAUNCH_PROFILE" value="Local" />
+      <option name="EXECUTABLE_PATH" value="J:\UDEV\Lyra_FPS_OnMetalX\Binaries\TVOS\LyraClient-TVOS-DebugGame" />
+      <option name="MANDATORY_PROGRAM_PARAMETERS" value=" &quot;J:\UDEV\Lyra_FPS_OnMetalX\Lyra_FPS_OnMetal.uproject&quot;" />
+      <option name="CUSTOM_PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="J:\UE53SRC\UnrealEngine" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="TERMINAL_INTERACTION_BEHAVIOR" value="FORCE_CONSOLE" />
+    </configuration_11>
+    <configuration_12>
+      <option name="CONFIGURATION" value="DebugGame Client" />
+      <option name="PLATFORM" value="Win64" />
+      <option name="PROJECT_FILE_PATH" value="$PROJECT_DIR$/Lyra_FPS_OnMetal.uproject" />
+      <option name="CURRENT_LAUNCH_PROFILE" value="Local" />
+      <option name="EXECUTABLE_PATH" value="J:\UDEV\Lyra_FPS_OnMetalX\Binaries\Win64\LyraClient-Win64-DebugGame.exe" />
+      <option name="MANDATORY_PROGRAM_PARAMETERS" value=" &quot;J:\UDEV\Lyra_FPS_OnMetalX\Lyra_FPS_OnMetal.uproject&quot;" />
+      <option name="CUSTOM_PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="J:\UE53SRC\UnrealEngine" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="TERMINAL_INTERACTION_BEHAVIOR" value="FORCE_CONSOLE" />
+    </configuration_12>
+    <configuration_13>
+      <option name="CONFIGURATION" value="DebugGame Editor" />
+      <option name="PLATFORM" value="Mac" />
+      <option name="PROJECT_FILE_PATH" value="$PROJECT_DIR$/Lyra_FPS_OnMetal.uproject" />
+      <option name="CURRENT_LAUNCH_PROFILE" value="Local" />
+      <option name="EXECUTABLE_PATH" value="J:\UE53SRC\UnrealEngine\Engine\Binaries\Mac\UnrealEditor-Mac-DebugGame.app/Contents/MacOS/UnrealEditor-Mac-DebugGame" />
+      <option name="MANDATORY_PROGRAM_PARAMETERS" value=" &quot;J:\UDEV\Lyra_FPS_OnMetalX\Lyra_FPS_OnMetal.uproject&quot;" />
+      <option name="CUSTOM_PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="J:\UE53SRC\UnrealEngine" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="TERMINAL_INTERACTION_BEHAVIOR" value="FORCE_CONSOLE" />
+    </configuration_13>
+    <configuration_14>
+      <option name="CONFIGURATION" value="DebugGame Editor" />
+      <option name="PLATFORM" value="TVOS" />
+      <option name="PROJECT_FILE_PATH" value="$PROJECT_DIR$/Lyra_FPS_OnMetal.uproject" />
+      <option name="CURRENT_LAUNCH_PROFILE" value="Local" />
+      <option name="EXECUTABLE_PATH" value="J:\UE53SRC\UnrealEngine\Engine\Binaries\TVOS\UnrealEditor-TVOS-DebugGame" />
+      <option name="MANDATORY_PROGRAM_PARAMETERS" value=" &quot;J:\UDEV\Lyra_FPS_OnMetalX\Lyra_FPS_OnMetal.uproject&quot;" />
+      <option name="CUSTOM_PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="J:\UE53SRC\UnrealEngine" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="TERMINAL_INTERACTION_BEHAVIOR" value="FORCE_CONSOLE" />
+    </configuration_14>
+    <configuration_15>
+      <option name="CONFIGURATION" value="DebugGame Editor" />
+      <option name="PLATFORM" value="Win64" />
+      <option name="PROJECT_FILE_PATH" value="$PROJECT_DIR$/Lyra_FPS_OnMetal.uproject" />
+      <option name="CURRENT_LAUNCH_PROFILE" value="Local" />
+      <option name="EXECUTABLE_PATH" value="J:\UE53SRC\UnrealEngine\Engine\Binaries\Win64\UnrealEditor-Win64-DebugGame.exe" />
+      <option name="MANDATORY_PROGRAM_PARAMETERS" value=" &quot;J:\UDEV\Lyra_FPS_OnMetalX\Lyra_FPS_OnMetal.uproject&quot;" />
+      <option name="CUSTOM_PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="J:\UE53SRC\UnrealEngine" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="TERMINAL_INTERACTION_BEHAVIOR" value="FORCE_CONSOLE" />
+    </configuration_15>
+    <configuration_16>
+      <option name="CONFIGURATION" value="DebugGame Server" />
+      <option name="PLATFORM" value="Mac" />
+      <option name="PROJECT_FILE_PATH" value="$PROJECT_DIR$/Lyra_FPS_OnMetal.uproject" />
+      <option name="CURRENT_LAUNCH_PROFILE" value="Local" />
+      <option name="EXECUTABLE_PATH" value="J:\UDEV\Lyra_FPS_OnMetalX\Binaries\Mac\LyraServer-Mac-DebugGame.app/Contents/MacOS/LyraServer-Mac-DebugGame" />
+      <option name="MANDATORY_PROGRAM_PARAMETERS" value=" &quot;J:\UDEV\Lyra_FPS_OnMetalX\Lyra_FPS_OnMetal.uproject&quot;" />
+      <option name="CUSTOM_PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="J:\UE53SRC\UnrealEngine" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="TERMINAL_INTERACTION_BEHAVIOR" value="FORCE_CONSOLE" />
+    </configuration_16>
+    <configuration_17>
+      <option name="CONFIGURATION" value="DebugGame Server" />
+      <option name="PLATFORM" value="TVOS" />
+      <option name="PROJECT_FILE_PATH" value="$PROJECT_DIR$/Lyra_FPS_OnMetal.uproject" />
+      <option name="CURRENT_LAUNCH_PROFILE" value="Local" />
+      <option name="EXECUTABLE_PATH" value="J:\UDEV\Lyra_FPS_OnMetalX\Binaries\TVOS\LyraServer-TVOS-DebugGame" />
+      <option name="MANDATORY_PROGRAM_PARAMETERS" value=" &quot;J:\UDEV\Lyra_FPS_OnMetalX\Lyra_FPS_OnMetal.uproject&quot;" />
+      <option name="CUSTOM_PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="J:\UE53SRC\UnrealEngine" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="TERMINAL_INTERACTION_BEHAVIOR" value="FORCE_CONSOLE" />
+    </configuration_17>
+    <configuration_18>
+      <option name="CONFIGURATION" value="DebugGame Server" />
+      <option name="PLATFORM" value="Win64" />
+      <option name="PROJECT_FILE_PATH" value="$PROJECT_DIR$/Lyra_FPS_OnMetal.uproject" />
+      <option name="CURRENT_LAUNCH_PROFILE" value="Local" />
+      <option name="EXECUTABLE_PATH" value="J:\UDEV\Lyra_FPS_OnMetalX\Binaries\Win64\LyraServer-Win64-DebugGame.exe" />
+      <option name="MANDATORY_PROGRAM_PARAMETERS" value=" &quot;J:\UDEV\Lyra_FPS_OnMetalX\Lyra_FPS_OnMetal.uproject&quot;" />
+      <option name="CUSTOM_PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="J:\UE53SRC\UnrealEngine" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="TERMINAL_INTERACTION_BEHAVIOR" value="FORCE_CONSOLE" />
+    </configuration_18>
+    <configuration_19>
+      <option name="CONFIGURATION" value="DebugGame" />
+      <option name="PLATFORM" value="Mac" />
+      <option name="PROJECT_FILE_PATH" value="$PROJECT_DIR$/Lyra_FPS_OnMetal.uproject" />
+      <option name="CURRENT_LAUNCH_PROFILE" value="Local" />
+      <option name="EXECUTABLE_PATH" value="J:\UDEV\Lyra_FPS_OnMetalX\Binaries\Mac\LyraGame-Mac-DebugGame.app/Contents/MacOS/LyraGame-Mac-DebugGame" />
+      <option name="MANDATORY_PROGRAM_PARAMETERS" value="" />
+      <option name="CUSTOM_PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="J:\UE53SRC\UnrealEngine" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="TERMINAL_INTERACTION_BEHAVIOR" value="FORCE_CONSOLE" />
+    </configuration_19>
+    <configuration_20>
+      <option name="CONFIGURATION" value="DebugGame" />
+      <option name="PLATFORM" value="TVOS" />
+      <option name="PROJECT_FILE_PATH" value="$PROJECT_DIR$/Lyra_FPS_OnMetal.uproject" />
+      <option name="CURRENT_LAUNCH_PROFILE" value="Local" />
+      <option name="EXECUTABLE_PATH" value="J:\UDEV\Lyra_FPS_OnMetalX\Binaries\TVOS\LyraGame-TVOS-DebugGame" />
+      <option name="MANDATORY_PROGRAM_PARAMETERS" value="" />
+      <option name="CUSTOM_PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="J:\UE53SRC\UnrealEngine" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="TERMINAL_INTERACTION_BEHAVIOR" value="FORCE_CONSOLE" />
+    </configuration_20>
+    <configuration_21>
+      <option name="CONFIGURATION" value="DebugGame" />
+      <option name="PLATFORM" value="Win64" />
+      <option name="PROJECT_FILE_PATH" value="$PROJECT_DIR$/Lyra_FPS_OnMetal.uproject" />
+      <option name="CURRENT_LAUNCH_PROFILE" value="Local" />
+      <option name="EXECUTABLE_PATH" value="J:\UDEV\Lyra_FPS_OnMetalX\Binaries\Win64\LyraGame-Win64-DebugGame.exe" />
+      <option name="MANDATORY_PROGRAM_PARAMETERS" value="" />
+      <option name="CUSTOM_PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="J:\UE53SRC\UnrealEngine" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="TERMINAL_INTERACTION_BEHAVIOR" value="FORCE_CONSOLE" />
+    </configuration_21>
+    <configuration_22>
+      <option name="CONFIGURATION" value="Debug" />
+      <option name="PLATFORM" value="Mac" />
+      <option name="PROJECT_FILE_PATH" value="$PROJECT_DIR$/Lyra_FPS_OnMetal.uproject" />
+      <option name="CURRENT_LAUNCH_PROFILE" value="Local" />
+      <option name="EXECUTABLE_PATH" value="J:\UDEV\Lyra_FPS_OnMetalX\Binaries\Mac\LyraGame-Mac-Debug.app/Contents/MacOS/LyraGame-Mac-Debug" />
+      <option name="MANDATORY_PROGRAM_PARAMETERS" value="" />
+      <option name="CUSTOM_PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="J:\UE53SRC\UnrealEngine" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="TERMINAL_INTERACTION_BEHAVIOR" value="FORCE_CONSOLE" />
+    </configuration_22>
+    <configuration_23>
+      <option name="CONFIGURATION" value="Debug" />
+      <option name="PLATFORM" value="TVOS" />
+      <option name="PROJECT_FILE_PATH" value="$PROJECT_DIR$/Lyra_FPS_OnMetal.uproject" />
+      <option name="CURRENT_LAUNCH_PROFILE" value="Local" />
+      <option name="EXECUTABLE_PATH" value="J:\UDEV\Lyra_FPS_OnMetalX\Binaries\TVOS\LyraGame-TVOS-Debug" />
+      <option name="MANDATORY_PROGRAM_PARAMETERS" value="" />
+      <option name="CUSTOM_PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="J:\UE53SRC\UnrealEngine" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="TERMINAL_INTERACTION_BEHAVIOR" value="FORCE_CONSOLE" />
+    </configuration_23>
+    <configuration_24>
+      <option name="CONFIGURATION" value="Debug" />
+      <option name="PLATFORM" value="Win64" />
+      <option name="PROJECT_FILE_PATH" value="$PROJECT_DIR$/Lyra_FPS_OnMetal.uproject" />
+      <option name="CURRENT_LAUNCH_PROFILE" value="Local" />
+      <option name="EXECUTABLE_PATH" value="J:\UDEV\Lyra_FPS_OnMetalX\Binaries\Win64\LyraGame-Win64-Debug.exe" />
+      <option name="MANDATORY_PROGRAM_PARAMETERS" value="" />
+      <option name="CUSTOM_PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="J:\UE53SRC\UnrealEngine" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="TERMINAL_INTERACTION_BEHAVIOR" value="FORCE_CONSOLE" />
+    </configuration_24>
+    <configuration_25>
+      <option name="CONFIGURATION" value="Development Client" />
+      <option name="PLATFORM" value="Mac" />
+      <option name="PROJECT_FILE_PATH" value="$PROJECT_DIR$/Lyra_FPS_OnMetal.uproject" />
+      <option name="CURRENT_LAUNCH_PROFILE" value="Local" />
+      <option name="EXECUTABLE_PATH" value="J:\UDEV\Lyra_FPS_OnMetalX\Binaries\Mac\LyraClient.app/Contents/MacOS/LyraClient" />
+      <option name="MANDATORY_PROGRAM_PARAMETERS" value=" &quot;J:\UDEV\Lyra_FPS_OnMetalX\Lyra_FPS_OnMetal.uproject&quot;" />
+      <option name="CUSTOM_PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="J:\UE53SRC\UnrealEngine" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="TERMINAL_INTERACTION_BEHAVIOR" value="FORCE_CONSOLE" />
+    </configuration_25>
+    <configuration_26>
+      <option name="CONFIGURATION" value="Development Client" />
+      <option name="PLATFORM" value="TVOS" />
+      <option name="PROJECT_FILE_PATH" value="$PROJECT_DIR$/Lyra_FPS_OnMetal.uproject" />
+      <option name="CURRENT_LAUNCH_PROFILE" value="Local" />
+      <option name="EXECUTABLE_PATH" value="J:\UDEV\Lyra_FPS_OnMetalX\Binaries\TVOS\LyraClient" />
+      <option name="MANDATORY_PROGRAM_PARAMETERS" value=" &quot;J:\UDEV\Lyra_FPS_OnMetalX\Lyra_FPS_OnMetal.uproject&quot;" />
+      <option name="CUSTOM_PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="J:\UE53SRC\UnrealEngine" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="TERMINAL_INTERACTION_BEHAVIOR" value="FORCE_CONSOLE" />
+    </configuration_26>
+    <configuration_27>
+      <option name="CONFIGURATION" value="Development Client" />
+      <option name="PLATFORM" value="Win64" />
+      <option name="PROJECT_FILE_PATH" value="$PROJECT_DIR$/Lyra_FPS_OnMetal.uproject" />
+      <option name="CURRENT_LAUNCH_PROFILE" value="Local" />
+      <option name="EXECUTABLE_PATH" value="J:\UDEV\Lyra_FPS_OnMetalX\Binaries\Win64\LyraClient.exe" />
+      <option name="MANDATORY_PROGRAM_PARAMETERS" value=" &quot;J:\UDEV\Lyra_FPS_OnMetalX\Lyra_FPS_OnMetal.uproject&quot;" />
+      <option name="CUSTOM_PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="J:\UE53SRC\UnrealEngine" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="TERMINAL_INTERACTION_BEHAVIOR" value="FORCE_CONSOLE" />
+    </configuration_27>
+    <configuration_28>
+      <option name="CONFIGURATION" value="Development Editor" />
+      <option name="PLATFORM" value="Mac" />
+      <option name="PROJECT_FILE_PATH" value="$PROJECT_DIR$/Lyra_FPS_OnMetal.uproject" />
+      <option name="CURRENT_LAUNCH_PROFILE" value="Local" />
+      <option name="EXECUTABLE_PATH" value="J:\UE53SRC\UnrealEngine\Engine\Binaries\Mac\UnrealEditor.app/Contents/MacOS/UnrealEditor" />
+      <option name="MANDATORY_PROGRAM_PARAMETERS" value=" &quot;J:\UDEV\Lyra_FPS_OnMetalX\Lyra_FPS_OnMetal.uproject&quot;" />
+      <option name="CUSTOM_PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="J:\UE53SRC\UnrealEngine" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="TERMINAL_INTERACTION_BEHAVIOR" value="FORCE_CONSOLE" />
+    </configuration_28>
+    <configuration_29>
+      <option name="CONFIGURATION" value="Development Editor" />
+      <option name="PLATFORM" value="TVOS" />
+      <option name="PROJECT_FILE_PATH" value="$PROJECT_DIR$/Lyra_FPS_OnMetal.uproject" />
+      <option name="CURRENT_LAUNCH_PROFILE" value="Local" />
+      <option name="EXECUTABLE_PATH" value="J:\UE53SRC\UnrealEngine\Engine\Binaries\TVOS\UnrealEditor" />
+      <option name="MANDATORY_PROGRAM_PARAMETERS" value=" &quot;J:\UDEV\Lyra_FPS_OnMetalX\Lyra_FPS_OnMetal.uproject&quot;" />
+      <option name="CUSTOM_PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="J:\UE53SRC\UnrealEngine" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="TERMINAL_INTERACTION_BEHAVIOR" value="FORCE_CONSOLE" />
+    </configuration_29>
+    <configuration_30>
+      <option name="CONFIGURATION" value="Development Editor" />
+      <option name="PLATFORM" value="Win64" />
+      <option name="PROJECT_FILE_PATH" value="$PROJECT_DIR$/Lyra_FPS_OnMetal.uproject" />
+      <option name="CURRENT_LAUNCH_PROFILE" value="Local" />
+      <option name="EXECUTABLE_PATH" value="J:\UE53SRC\UnrealEngine\Engine\Binaries\Win64\UnrealEditor.exe" />
+      <option name="MANDATORY_PROGRAM_PARAMETERS" value=" &quot;J:\UDEV\Lyra_FPS_OnMetalX\Lyra_FPS_OnMetal.uproject&quot;" />
+      <option name="CUSTOM_PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="J:\UE53SRC\UnrealEngine" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="TERMINAL_INTERACTION_BEHAVIOR" value="FORCE_CONSOLE" />
+    </configuration_30>
+    <configuration_31>
+      <option name="CONFIGURATION" value="Development Server" />
+      <option name="PLATFORM" value="Mac" />
+      <option name="PROJECT_FILE_PATH" value="$PROJECT_DIR$/Lyra_FPS_OnMetal.uproject" />
+      <option name="CURRENT_LAUNCH_PROFILE" value="Local" />
+      <option name="EXECUTABLE_PATH" value="J:\UDEV\Lyra_FPS_OnMetalX\Binaries\Mac\LyraServer.app/Contents/MacOS/LyraServer" />
+      <option name="MANDATORY_PROGRAM_PARAMETERS" value=" &quot;J:\UDEV\Lyra_FPS_OnMetalX\Lyra_FPS_OnMetal.uproject&quot;" />
+      <option name="CUSTOM_PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="J:\UE53SRC\UnrealEngine" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="TERMINAL_INTERACTION_BEHAVIOR" value="FORCE_CONSOLE" />
+    </configuration_31>
+    <configuration_32>
+      <option name="CONFIGURATION" value="Development Server" />
+      <option name="PLATFORM" value="TVOS" />
+      <option name="PROJECT_FILE_PATH" value="$PROJECT_DIR$/Lyra_FPS_OnMetal.uproject" />
+      <option name="CURRENT_LAUNCH_PROFILE" value="Local" />
+      <option name="EXECUTABLE_PATH" value="J:\UDEV\Lyra_FPS_OnMetalX\Binaries\TVOS\LyraServer" />
+      <option name="MANDATORY_PROGRAM_PARAMETERS" value=" &quot;J:\UDEV\Lyra_FPS_OnMetalX\Lyra_FPS_OnMetal.uproject&quot;" />
+      <option name="CUSTOM_PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="J:\UE53SRC\UnrealEngine" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="TERMINAL_INTERACTION_BEHAVIOR" value="FORCE_CONSOLE" />
+    </configuration_32>
+    <configuration_33>
+      <option name="CONFIGURATION" value="Development Server" />
+      <option name="PLATFORM" value="Win64" />
+      <option name="PROJECT_FILE_PATH" value="$PROJECT_DIR$/Lyra_FPS_OnMetal.uproject" />
+      <option name="CURRENT_LAUNCH_PROFILE" value="Local" />
+      <option name="EXECUTABLE_PATH" value="J:\UDEV\Lyra_FPS_OnMetalX\Binaries\Win64\LyraServer.exe" />
+      <option name="MANDATORY_PROGRAM_PARAMETERS" value=" &quot;J:\UDEV\Lyra_FPS_OnMetalX\Lyra_FPS_OnMetal.uproject&quot;" />
+      <option name="CUSTOM_PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="J:\UE53SRC\UnrealEngine" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="TERMINAL_INTERACTION_BEHAVIOR" value="FORCE_CONSOLE" />
+    </configuration_33>
+    <configuration_34>
+      <option name="CONFIGURATION" value="Development" />
+      <option name="PLATFORM" value="Mac" />
+      <option name="PROJECT_FILE_PATH" value="$PROJECT_DIR$/Lyra_FPS_OnMetal.uproject" />
+      <option name="CURRENT_LAUNCH_PROFILE" value="Local" />
+      <option name="EXECUTABLE_PATH" value="J:\UDEV\Lyra_FPS_OnMetalX\Binaries\Mac\LyraGame.app/Contents/MacOS/LyraGame" />
+      <option name="MANDATORY_PROGRAM_PARAMETERS" value="" />
+      <option name="CUSTOM_PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="J:\UE53SRC\UnrealEngine" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="TERMINAL_INTERACTION_BEHAVIOR" value="FORCE_CONSOLE" />
+    </configuration_34>
+    <configuration_35>
+      <option name="CONFIGURATION" value="Development" />
+      <option name="PLATFORM" value="TVOS" />
+      <option name="PROJECT_FILE_PATH" value="$PROJECT_DIR$/Lyra_FPS_OnMetal.uproject" />
+      <option name="CURRENT_LAUNCH_PROFILE" value="Local" />
+      <option name="EXECUTABLE_PATH" value="J:\UDEV\Lyra_FPS_OnMetalX\Binaries\TVOS\LyraGame" />
+      <option name="MANDATORY_PROGRAM_PARAMETERS" value="" />
+      <option name="CUSTOM_PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="J:\UE53SRC\UnrealEngine" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="TERMINAL_INTERACTION_BEHAVIOR" value="FORCE_CONSOLE" />
+    </configuration_35>
+    <configuration_36>
+      <option name="CONFIGURATION" value="Development" />
+      <option name="PLATFORM" value="Win64" />
+      <option name="PROJECT_FILE_PATH" value="$PROJECT_DIR$/Lyra_FPS_OnMetal.uproject" />
+      <option name="CURRENT_LAUNCH_PROFILE" value="Local" />
+      <option name="EXECUTABLE_PATH" value="J:\UDEV\Lyra_FPS_OnMetalX\Binaries\Win64\LyraGame.exe" />
+      <option name="MANDATORY_PROGRAM_PARAMETERS" value="" />
+      <option name="CUSTOM_PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="J:\UE53SRC\UnrealEngine" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="TERMINAL_INTERACTION_BEHAVIOR" value="FORCE_CONSOLE" />
+    </configuration_36>
+    <configuration_37>
+      <option name="CONFIGURATION" value="Shipping Client" />
+      <option name="PLATFORM" value="Mac" />
+      <option name="PROJECT_FILE_PATH" value="$PROJECT_DIR$/Lyra_FPS_OnMetal.uproject" />
+      <option name="CURRENT_LAUNCH_PROFILE" value="Local" />
+      <option name="EXECUTABLE_PATH" value="J:\UDEV\Lyra_FPS_OnMetalX\Binaries\Mac\LyraClient-Mac-Shipping.app/Contents/MacOS/LyraClient-Mac-Shipping" />
+      <option name="MANDATORY_PROGRAM_PARAMETERS" value=" &quot;J:\UDEV\Lyra_FPS_OnMetalX\Lyra_FPS_OnMetal.uproject&quot;" />
+      <option name="CUSTOM_PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="J:\UE53SRC\UnrealEngine" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="TERMINAL_INTERACTION_BEHAVIOR" value="FORCE_CONSOLE" />
+    </configuration_37>
+    <configuration_38>
+      <option name="CONFIGURATION" value="Shipping Client" />
+      <option name="PLATFORM" value="TVOS" />
+      <option name="PROJECT_FILE_PATH" value="$PROJECT_DIR$/Lyra_FPS_OnMetal.uproject" />
+      <option name="CURRENT_LAUNCH_PROFILE" value="Local" />
+      <option name="EXECUTABLE_PATH" value="J:\UDEV\Lyra_FPS_OnMetalX\Binaries\TVOS\LyraClient-TVOS-Shipping" />
+      <option name="MANDATORY_PROGRAM_PARAMETERS" value=" &quot;J:\UDEV\Lyra_FPS_OnMetalX\Lyra_FPS_OnMetal.uproject&quot;" />
+      <option name="CUSTOM_PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="J:\UE53SRC\UnrealEngine" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="TERMINAL_INTERACTION_BEHAVIOR" value="FORCE_CONSOLE" />
+    </configuration_38>
+    <configuration_39>
+      <option name="CONFIGURATION" value="Shipping Client" />
+      <option name="PLATFORM" value="Win64" />
+      <option name="PROJECT_FILE_PATH" value="$PROJECT_DIR$/Lyra_FPS_OnMetal.uproject" />
+      <option name="CURRENT_LAUNCH_PROFILE" value="Local" />
+      <option name="EXECUTABLE_PATH" value="J:\UDEV\Lyra_FPS_OnMetalX\Binaries\Win64\LyraClient-Win64-Shipping.exe" />
+      <option name="MANDATORY_PROGRAM_PARAMETERS" value=" &quot;J:\UDEV\Lyra_FPS_OnMetalX\Lyra_FPS_OnMetal.uproject&quot;" />
+      <option name="CUSTOM_PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="J:\UE53SRC\UnrealEngine" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="TERMINAL_INTERACTION_BEHAVIOR" value="FORCE_CONSOLE" />
+    </configuration_39>
+    <configuration_40>
+      <option name="CONFIGURATION" value="Shipping Server" />
+      <option name="PLATFORM" value="Mac" />
+      <option name="PROJECT_FILE_PATH" value="$PROJECT_DIR$/Lyra_FPS_OnMetal.uproject" />
+      <option name="CURRENT_LAUNCH_PROFILE" value="Local" />
+      <option name="EXECUTABLE_PATH" value="J:\UDEV\Lyra_FPS_OnMetalX\Binaries\Mac\LyraServer-Mac-Shipping.app/Contents/MacOS/LyraServer-Mac-Shipping" />
+      <option name="MANDATORY_PROGRAM_PARAMETERS" value=" &quot;J:\UDEV\Lyra_FPS_OnMetalX\Lyra_FPS_OnMetal.uproject&quot;" />
+      <option name="CUSTOM_PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="J:\UE53SRC\UnrealEngine" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="TERMINAL_INTERACTION_BEHAVIOR" value="FORCE_CONSOLE" />
+    </configuration_40>
+    <configuration_41>
+      <option name="CONFIGURATION" value="Shipping Server" />
+      <option name="PLATFORM" value="TVOS" />
+      <option name="PROJECT_FILE_PATH" value="$PROJECT_DIR$/Lyra_FPS_OnMetal.uproject" />
+      <option name="CURRENT_LAUNCH_PROFILE" value="Local" />
+      <option name="EXECUTABLE_PATH" value="J:\UDEV\Lyra_FPS_OnMetalX\Binaries\TVOS\LyraServer-TVOS-Shipping" />
+      <option name="MANDATORY_PROGRAM_PARAMETERS" value=" &quot;J:\UDEV\Lyra_FPS_OnMetalX\Lyra_FPS_OnMetal.uproject&quot;" />
+      <option name="CUSTOM_PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="J:\UE53SRC\UnrealEngine" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="TERMINAL_INTERACTION_BEHAVIOR" value="FORCE_CONSOLE" />
+    </configuration_41>
+    <configuration_42>
+      <option name="CONFIGURATION" value="Shipping Server" />
+      <option name="PLATFORM" value="Win64" />
+      <option name="PROJECT_FILE_PATH" value="$PROJECT_DIR$/Lyra_FPS_OnMetal.uproject" />
+      <option name="CURRENT_LAUNCH_PROFILE" value="Local" />
+      <option name="EXECUTABLE_PATH" value="J:\UDEV\Lyra_FPS_OnMetalX\Binaries\Win64\LyraServer-Win64-Shipping.exe" />
+      <option name="MANDATORY_PROGRAM_PARAMETERS" value=" &quot;J:\UDEV\Lyra_FPS_OnMetalX\Lyra_FPS_OnMetal.uproject&quot;" />
+      <option name="CUSTOM_PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="J:\UE53SRC\UnrealEngine" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="TERMINAL_INTERACTION_BEHAVIOR" value="FORCE_CONSOLE" />
+    </configuration_42>
+    <configuration_43>
+      <option name="CONFIGURATION" value="Shipping" />
+      <option name="PLATFORM" value="Mac" />
+      <option name="PROJECT_FILE_PATH" value="$PROJECT_DIR$/Lyra_FPS_OnMetal.uproject" />
+      <option name="CURRENT_LAUNCH_PROFILE" value="Local" />
+      <option name="EXECUTABLE_PATH" value="J:\UDEV\Lyra_FPS_OnMetalX\Binaries\Mac\LyraGame-Mac-Shipping.app/Contents/MacOS/LyraGame-Mac-Shipping" />
+      <option name="MANDATORY_PROGRAM_PARAMETERS" value="" />
+      <option name="CUSTOM_PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="J:\UE53SRC\UnrealEngine" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="TERMINAL_INTERACTION_BEHAVIOR" value="FORCE_CONSOLE" />
+    </configuration_43>
+    <configuration_44>
+      <option name="CONFIGURATION" value="Shipping" />
+      <option name="PLATFORM" value="TVOS" />
+      <option name="PROJECT_FILE_PATH" value="$PROJECT_DIR$/Lyra_FPS_OnMetal.uproject" />
+      <option name="CURRENT_LAUNCH_PROFILE" value="Local" />
+      <option name="EXECUTABLE_PATH" value="J:\UDEV\Lyra_FPS_OnMetalX\Binaries\TVOS\LyraGame-TVOS-Shipping" />
+      <option name="MANDATORY_PROGRAM_PARAMETERS" value="" />
+      <option name="CUSTOM_PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="J:\UE53SRC\UnrealEngine" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="TERMINAL_INTERACTION_BEHAVIOR" value="FORCE_CONSOLE" />
+    </configuration_44>
+    <configuration_45>
+      <option name="CONFIGURATION" value="Shipping" />
+      <option name="PLATFORM" value="Win64" />
+      <option name="PROJECT_FILE_PATH" value="$PROJECT_DIR$/Lyra_FPS_OnMetal.uproject" />
+      <option name="CURRENT_LAUNCH_PROFILE" value="Local" />
+      <option name="EXECUTABLE_PATH" value="J:\UDEV\Lyra_FPS_OnMetalX\Binaries\Win64\LyraGame-Win64-Shipping.exe" />
+      <option name="MANDATORY_PROGRAM_PARAMETERS" value="" />
+      <option name="CUSTOM_PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="J:\UE53SRC\UnrealEngine" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="TERMINAL_INTERACTION_BEHAVIOR" value="FORCE_CONSOLE" />
+    </configuration_45>
+    <configuration_46>
+      <option name="CONFIGURATION" value="Test Client" />
+      <option name="PLATFORM" value="Mac" />
+      <option name="PROJECT_FILE_PATH" value="$PROJECT_DIR$/Lyra_FPS_OnMetal.uproject" />
+      <option name="CURRENT_LAUNCH_PROFILE" value="Local" />
+      <option name="EXECUTABLE_PATH" value="J:\UDEV\Lyra_FPS_OnMetalX\Binaries\Mac\LyraClient-Mac-Test.app/Contents/MacOS/LyraClient-Mac-Test" />
+      <option name="MANDATORY_PROGRAM_PARAMETERS" value=" &quot;J:\UDEV\Lyra_FPS_OnMetalX\Lyra_FPS_OnMetal.uproject&quot;" />
+      <option name="CUSTOM_PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="J:\UE53SRC\UnrealEngine" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="TERMINAL_INTERACTION_BEHAVIOR" value="FORCE_CONSOLE" />
+    </configuration_46>
+    <configuration_47>
+      <option name="CONFIGURATION" value="Test Client" />
+      <option name="PLATFORM" value="TVOS" />
+      <option name="PROJECT_FILE_PATH" value="$PROJECT_DIR$/Lyra_FPS_OnMetal.uproject" />
+      <option name="CURRENT_LAUNCH_PROFILE" value="Local" />
+      <option name="EXECUTABLE_PATH" value="J:\UDEV\Lyra_FPS_OnMetalX\Binaries\TVOS\LyraClient-TVOS-Test" />
+      <option name="MANDATORY_PROGRAM_PARAMETERS" value=" &quot;J:\UDEV\Lyra_FPS_OnMetalX\Lyra_FPS_OnMetal.uproject&quot;" />
+      <option name="CUSTOM_PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="J:\UE53SRC\UnrealEngine" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="TERMINAL_INTERACTION_BEHAVIOR" value="FORCE_CONSOLE" />
+    </configuration_47>
+    <configuration_48>
+      <option name="CONFIGURATION" value="Test Client" />
+      <option name="PLATFORM" value="Win64" />
+      <option name="PROJECT_FILE_PATH" value="$PROJECT_DIR$/Lyra_FPS_OnMetal.uproject" />
+      <option name="CURRENT_LAUNCH_PROFILE" value="Local" />
+      <option name="EXECUTABLE_PATH" value="J:\UDEV\Lyra_FPS_OnMetalX\Binaries\Win64\LyraClient-Win64-Test.exe" />
+      <option name="MANDATORY_PROGRAM_PARAMETERS" value=" &quot;J:\UDEV\Lyra_FPS_OnMetalX\Lyra_FPS_OnMetal.uproject&quot;" />
+      <option name="CUSTOM_PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="J:\UE53SRC\UnrealEngine" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="TERMINAL_INTERACTION_BEHAVIOR" value="FORCE_CONSOLE" />
+    </configuration_48>
+    <configuration_49>
+      <option name="CONFIGURATION" value="Test Server" />
+      <option name="PLATFORM" value="Mac" />
+      <option name="PROJECT_FILE_PATH" value="$PROJECT_DIR$/Lyra_FPS_OnMetal.uproject" />
+      <option name="CURRENT_LAUNCH_PROFILE" value="Local" />
+      <option name="EXECUTABLE_PATH" value="J:\UDEV\Lyra_FPS_OnMetalX\Binaries\Mac\LyraServer-Mac-Test.app/Contents/MacOS/LyraServer-Mac-Test" />
+      <option name="MANDATORY_PROGRAM_PARAMETERS" value=" &quot;J:\UDEV\Lyra_FPS_OnMetalX\Lyra_FPS_OnMetal.uproject&quot;" />
+      <option name="CUSTOM_PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="J:\UE53SRC\UnrealEngine" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="TERMINAL_INTERACTION_BEHAVIOR" value="FORCE_CONSOLE" />
+    </configuration_49>
+    <configuration_50>
+      <option name="CONFIGURATION" value="Test Server" />
+      <option name="PLATFORM" value="TVOS" />
+      <option name="PROJECT_FILE_PATH" value="$PROJECT_DIR$/Lyra_FPS_OnMetal.uproject" />
+      <option name="CURRENT_LAUNCH_PROFILE" value="Local" />
+      <option name="EXECUTABLE_PATH" value="J:\UDEV\Lyra_FPS_OnMetalX\Binaries\TVOS\LyraServer-TVOS-Test" />
+      <option name="MANDATORY_PROGRAM_PARAMETERS" value=" &quot;J:\UDEV\Lyra_FPS_OnMetalX\Lyra_FPS_OnMetal.uproject&quot;" />
+      <option name="CUSTOM_PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="J:\UE53SRC\UnrealEngine" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="TERMINAL_INTERACTION_BEHAVIOR" value="FORCE_CONSOLE" />
+    </configuration_50>
+    <configuration_51>
+      <option name="CONFIGURATION" value="Test Server" />
+      <option name="PLATFORM" value="Win64" />
+      <option name="PROJECT_FILE_PATH" value="$PROJECT_DIR$/Lyra_FPS_OnMetal.uproject" />
+      <option name="CURRENT_LAUNCH_PROFILE" value="Local" />
+      <option name="EXECUTABLE_PATH" value="J:\UDEV\Lyra_FPS_OnMetalX\Binaries\Win64\LyraServer-Win64-Test.exe" />
+      <option name="MANDATORY_PROGRAM_PARAMETERS" value=" &quot;J:\UDEV\Lyra_FPS_OnMetalX\Lyra_FPS_OnMetal.uproject&quot;" />
+      <option name="CUSTOM_PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="J:\UE53SRC\UnrealEngine" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="TERMINAL_INTERACTION_BEHAVIOR" value="FORCE_CONSOLE" />
+    </configuration_51>
+    <configuration_52>
+      <option name="CONFIGURATION" value="Test" />
+      <option name="PLATFORM" value="Mac" />
+      <option name="PROJECT_FILE_PATH" value="$PROJECT_DIR$/Lyra_FPS_OnMetal.uproject" />
+      <option name="CURRENT_LAUNCH_PROFILE" value="Local" />
+      <option name="EXECUTABLE_PATH" value="J:\UDEV\Lyra_FPS_OnMetalX\Binaries\Mac\LyraGame-Mac-Test.app/Contents/MacOS/LyraGame-Mac-Test" />
+      <option name="MANDATORY_PROGRAM_PARAMETERS" value="" />
+      <option name="CUSTOM_PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="J:\UE53SRC\UnrealEngine" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="TERMINAL_INTERACTION_BEHAVIOR" value="FORCE_CONSOLE" />
+    </configuration_52>
+    <configuration_53>
+      <option name="CONFIGURATION" value="Test" />
+      <option name="PLATFORM" value="TVOS" />
+      <option name="PROJECT_FILE_PATH" value="$PROJECT_DIR$/Lyra_FPS_OnMetal.uproject" />
+      <option name="CURRENT_LAUNCH_PROFILE" value="Local" />
+      <option name="EXECUTABLE_PATH" value="J:\UDEV\Lyra_FPS_OnMetalX\Binaries\TVOS\LyraGame-TVOS-Test" />
+      <option name="MANDATORY_PROGRAM_PARAMETERS" value="" />
+      <option name="CUSTOM_PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="J:\UE53SRC\UnrealEngine" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="TERMINAL_INTERACTION_BEHAVIOR" value="FORCE_CONSOLE" />
+    </configuration_53>
+    <configuration_54>
+      <option name="CONFIGURATION" value="Test" />
+      <option name="PLATFORM" value="Win64" />
+      <option name="PROJECT_FILE_PATH" value="$PROJECT_DIR$/Lyra_FPS_OnMetal.uproject" />
+      <option name="CURRENT_LAUNCH_PROFILE" value="Local" />
+      <option name="EXECUTABLE_PATH" value="J:\UDEV\Lyra_FPS_OnMetalX\Binaries\Win64\LyraGame-Win64-Test.exe" />
+      <option name="MANDATORY_PROGRAM_PARAMETERS" value="" />
+      <option name="CUSTOM_PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="J:\UE53SRC\UnrealEngine" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="TERMINAL_INTERACTION_BEHAVIOR" value="FORCE_CONSOLE" />
+    </configuration_54>
+    <option name="PROJECT_FILE_PATH" value="$PROJECT_DIR$/Lyra_FPS_OnMetal.uproject" />
+    <option name="AUTO_SELECT_PRIORITY" value="10010" />
+    <method v="2">
+      <option name="Build" />
+    </method>
+  </configuration>
+</component>

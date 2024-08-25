@@ -1,0 +1,176 @@
+// Fill out your copyright notice in the Description page of Project Settings.
+
+#pragma once
+
+#include "CoreMinimal.h"
+#include "Subsystems/WorldSubsystem.h"
+#include "Engine/HitResult.h"
+#include "GameplayEffect.h"
+#include "AbilitySystemComponent.h"
+#include "AbilitySystemGlobals.h"
+#include "GameplayEffectTypes.h"
+#include "Projectile/OnMetal_ProjectileDataAsset.h"
+
+#include "OnMetal_ProjectileSubsystem.generated.h"
+
+class UNiagaraComponent;
+class AWindDirectionalSource;
+class UWorld;
+class UPrimitiveComponent;
+class UWindDirectionalSourceComponent;
+
+DECLARE_STATS_GROUP(TEXT("OnMetalProjectileStatGroup"), STATGROUP_OnMetalProjectile,
+					STATCAT_Advanced);
+
+DECLARE_DYNAMIC_DELEGATE_FiveParams(FOnMetal_OnProjectileImpact, const FHitResult&, HitResult, const FVector&, Direction, const int32, ProjectileID,FGameplayEffectSpecHandle&, DamageEffectSpecHandle, AActor*, ProjectileOwner);
+DECLARE_DYNAMIC_DELEGATE_ThreeParams(FOnMetal_OnProjectilePositionUpdate, const FVector&, Location, const FVector&, Velocity, const int32, ProjectileID);
+//DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnProjectileHitTarget, const FGameplayAbilityTargetDataHandle&, TargetDataHandle);
+DECLARE_DYNAMIC_MULTICAST_DELEGATE_ThreeParams(FOnProjectileHitTarget, const FGameplayAbilityTargetDataHandle&, TargetDataHandle, const FHitResult&, HitResult, AActor*, ProjectileOwner);
+//DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FOnProjectileHitTarget, const FHitResult&, HitResult, AActor*, ProjectileOwner);
+
+USTRUCT(BlueprintType)
+struct FOnMetal_ProjectileData
+{
+	GENERATED_BODY()
+	
+	UPROPERTY(EditAnywhere, NotReplicated, BlueprintReadWrite, Category = "OnMetal|Projectile")
+	int32 ProjectileID {-1};
+	UPROPERTY(EditAnywhere, NotReplicated, BlueprintReadWrite, Category = "OnMetal|Projectile")
+	double Velocity {10000.0};
+	UPROPERTY(EditAnywhere, NotReplicated, BlueprintReadWrite, Category = "OnMetal|Projectile")
+	double DragCoefficient {0.283};
+	UPROPERTY(EditAnywhere, NotReplicated, BlueprintReadWrite, Category = "OnMetal|Projectile")
+	float Lifetime {6.0f};
+	UPROPERTY(EditAnywhere, NotReplicated, BlueprintReadWrite, Category = "OnMetal|Projectile")
+	TEnumAsByte<ECollisionChannel> CollisionChannel {ECC_Visibility};
+	UPROPERTY(EditAnywhere, NotReplicated, BlueprintReadWrite, Category = "OnMetal|Projectile")
+	TArray<AActor*> ActorsToIgnore;
+	UPROPERTY(EditAnywhere, NotReplicated, BlueprintReadWrite, Category = "OnMetal|Projectile")
+	FOnMetalProjectileDebugData DebugData;
+	UPROPERTY(EditAnywhere, NotReplicated, BlueprintReadWrite, Category = "OnMetal|Projectile")
+	FOnMetalProjectileParticleData ParticleData;
+	
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "OnMetal|Projectile")
+	TSubclassOf<UGameplayEffect> ImpactEffectClass;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "OnMetal|Projectile")
+	float EffectLevel = 1.0f;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "OnMetal|Projectile")
+	int32 EffectStacks = 1;
+
+	UPROPERTY(BlueprintReadWrite, meta = (ExposeOnSpawn = true))
+	FGameplayEffectSpecHandle DamageEffectSpecHandle;
+	
+	UPROPERTY(EditAnywhere, NotReplicated, BlueprintReadWrite, Category = "OnMetal|Projectile")
+	AActor* ProjectileOwner;
+	
+	FOnMetal_OnProjectileImpact OnImpact;
+	FOnMetal_OnProjectilePositionUpdate OnPositionUpdate;
+	//FOnMetal_OnProjectileTargetDataReady OnProjectileTargetDataReady;
+
+	UPROPERTY(NotReplicated)
+	TObjectPtr<UWorld> WorldPtr;
+	UPROPERTY(NotReplicated)
+	TObjectPtr<UPrimitiveComponent> VisualComponent;
+	bool bHandleVisualComponent {false};
+
+	FTransform LaunchTransform {FTransform()};
+	float LaunchStartTime {0.0f};
+	bool bHadImpact {false};
+
+	FVector ForwardVelocity {FVector::ZeroVector};
+	FVector Location {FVector::ZeroVector};
+	FVector End {FVector::ZeroVector};
+	FVector PreviousLocation {FVector::ZeroVector};
+
+	FHitResult HitResult;
+	
+	UPROPERTY()
+	AActor* HitActor = HitResult.GetActor();
+	
+	UPROPERTY()
+	FGameplayAbilityTargetDataHandle TargetDataHandle;
+
+	UPROPERTY()
+	UAbilitySystemComponent* HitASC = UAbilitySystemGlobals::GetAbilitySystemComponentFromActor(HitActor);
+
+	UPROPERTY()
+	UAbilitySystemComponent* SourceASC = UAbilitySystemGlobals::GetAbilitySystemComponentFromActor(ProjectileOwner);
+	
+	void Initialize(UWorld* World);
+	void PerformStep(const FVector& Wind, float DeltaSeconds);
+	FHitResult PerformTrace() const;
+	
+};
+
+
+/**
+ * 
+ */
+UCLASS()
+class METALONMETALRUNTIME_API UOnMetal_ProjectileSubsystem : public UTickableWorldSubsystem
+{
+	GENERATED_BODY()
+public:
+	virtual void Initialize(FSubsystemCollectionBase& Collection) override;
+	virtual void Deinitialize() override;
+	virtual bool IsTickable() const override { return Projectiles.Num() > 0; }
+	//virtual TStatId GetStatId() const override { RETURN_QUICK_DECLARE_CYCLE_STAT(USKGMLEGizmoWorldSubsystem, STATGROUP_Tickables); }
+	virtual void Tick(float DeltaTime) override;
+	
+	// UFUNCTION(BlueprintCallable, Category = "OnMetal|Projectile")
+	// FGameplayAbilityTargetDataHandle GetProjectileTargetData(int32 ProjectileID) const;
+
+	FOnProjectileHitTarget OnProjectileHitTarget;
+
+	UFUNCTION(Server, Reliable, WithValidation)
+	void ServerHandleProjectileHit(const FGameplayAbilityTargetDataHandle& TargetData, const FHitResult& HitResult, UAbilitySystemComponent* SourceASC);
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Gameplay Abilities")
+	TSubclassOf<UGameplayAbility> DamageAbilityClass;
+	
+	bool IsValidHit(const FHitResult& HitResult) const;
+
+private:
+	UPROPERTY()
+	TObjectPtr<UWorld> World;
+	UPROPERTY()
+	TArray<UWindDirectionalSourceComponent*> WindSources;
+
+	//MAKE INLINE ON STACK LATER
+	TArray<FOnMetal_ProjectileData, TInlineAllocator<40>> Projectiles;
+	void PerformProjectileStep(FOnMetal_ProjectileData& Projectile, const FVector& Wind);
+	FVector GetWindSourceVelocity(const FOnMetal_ProjectileData& Projectile);
+	void RemoveProjectile(const int32 Index);
+
+public:
+	UFUNCTION(BlueprintCallable, Category = "OnMetal|Projectile")
+	void SetWindSources(TArray<AWindDirectionalSource*> WindDirectionalSources);
+	//VisualComponentOverride will replace the ParticleData
+	UFUNCTION(BlueprintCallable, Category = "OnMetal|Projectile")
+	void FireProjectile(const int32 ProjectileID,
+	                    UOnMetal_ProjectileDataAsset* DataAsset,
+	                    const TArray<AActor*>& ActorsToIgnore,
+	                    const FTransform& LaunchTransform,
+	                    UPrimitiveComponent* VisualComponentOverride,
+	                    FOnMetal_OnProjectileImpact OnImpact,
+	                    FOnMetal_OnProjectilePositionUpdate OnPositionUpdate,
+	                    FGameplayEffectSpecHandle DamageEffectSpecHandle,
+	                    AActor* ProjectileOwner);
+	
+	UFUNCTION(BlueprintCallable, Category = "OnMetal|Projectile")
+	bool GetProjectileZero(UOnMetal_ProjectileDataAsset* DataAsset, double Distance, FTransform LaunchTransform, FTransform OpticAimSocket, FRotator& OUTLookAtRotation);
+	UFUNCTION(BlueprintCallable, Category = "OnMetal|Projectile")
+	bool GetProjectileZeroAtLocation(FRotator& OUTLookAtRotation, const FVector& Location, FTransform LaunchTransform, FTransform OpticAimSocket);
+	//Returns true if valid (LaunchTransform not invalid)
+	UFUNCTION(BlueprintCallable, Category = "OnMetal|Projectile")
+	virtual bool GetProjectileLocationAtDistance(UOnMetal_ProjectileDataAsset* DataAsset, double Distance, FTransform LaunchTransform, FVector& OUTLocation);
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Projectile")
+	TSubclassOf<UGameplayEffect> ProjectileDamageEffectClass;
+	
+	
+	
+	
+};

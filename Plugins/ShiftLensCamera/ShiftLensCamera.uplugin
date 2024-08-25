@@ -1,0 +1,58 @@
+{
+	"FileVersion": 3,
+	"Version": 1,
+	"VersionName": "2.0",
+	"FriendlyName": "Shift Lens Camera",
+	"Description": "Camera with shift lens function component and actor on Unreal Engine 5. Available perspective correction in real-time, Sequencer and Movie Render Queue.",
+	"Category": "Code Plugins",
+	"CreatedBy": "christinayan",
+	"CreatedByURL": "https://christinayan01.jp/architecture/",
+	"DocsURL": "https://christinayan01.jp/architecture/archives/21825",
+	"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/product/7d6d90a019794e9d9894c682aa261ef6",
+	"SupportURL": "mailto:takahiro.yanai@christinayan01.main.jp",
+	"EngineVersion": "5.3.0",
+	"CanContainContent": true,
+	"Installed": true,
+	"SupportedTargetPlatforms": [
+		"Win64",
+		"Mac",
+		"Linux"
+	],
+	"Modules": [
+		{
+			"Name": "ShiftLensCamera",
+			"Type": "Runtime",
+			"LoadingPhase": "Default",
+			"PlatformAllowList": [
+				"Win64",
+				"Mac",
+				"Linux"
+			]
+		},
+		{
+			"Name": "MoviePipelineShiftLensRenderPass",
+			"Type": "Runtime",
+			"LoadingPhase": "Default",
+			"PlatformAllowList": [
+				"Win64",
+				"Mac",
+				"Linux"
+			]
+		}
+	],
+	"Plugins": [
+		{
+			"Name": "MovieRenderPipeline",
+			"Enabled": true,
+			"PlatformAllowList": [
+				"Win64",
+				"Mac",
+				"Linux"
+			]
+		},
+		{
+			"Name": "ActorLayerUtilities",
+			"Enabled": true
+		}
+	]
+}

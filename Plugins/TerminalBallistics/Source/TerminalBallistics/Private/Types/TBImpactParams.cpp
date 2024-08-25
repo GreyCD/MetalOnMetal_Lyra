@@ -1,0 +1,44 @@
+#include "Types/TBImpactParams.h"
+#include "Core/TBBulletDataAsset.h"
+#include "Core/TBBullets.h"
+
+
+
+FTBImpactParams::FTBImpactParams(const FHitResult& InHitResult, UBulletDataAsset* BulletDataAsset, FVector InVelocity, bool bIsPenetrating, TEnumAsByte<EPhysicalSurface> SurfaceType, const FVector& InStartLocation, AActor* InInstigatingActor, double PenetrationDepth, double dV, bool bIsRicochet, const FTBProjectileId InProjectileId, const FVector& InRicochetVector)
+	: FTBImpact(InHitResult, InVelocity, SurfaceType, InStartLocation, InInstigatingActor, bIsRicochet, bIsPenetrating, PenetrationDepth, dV, InProjectileId, InRicochetVector)
+{
+	if (BulletDataAsset)
+	{
+		ProjectileSize = BulletDataAsset->ProjectileSize;
+		BulletProperties = BulletDataAsset->BulletProperties;
+		BulletInfo = FTBBulletInfo(BulletDataAsset->Name, BulletDataAsset->BulletType, BulletDataAsset->GameplayTag, BulletDataAsset->BulletVariation);
+	}
+}
+
+FTBImpactParams::FTBImpactParams(const FHitResult& InHitResult, const FTBBullet& Bullet, const FVector& InVelocity, const bool bIsPenetrating, TEnumAsByte<EPhysicalSurface> SurfaceType, const FVector& InStartLocation, AActor* InInstigatingActor, const bool bIsRicochet, const FTBProjectileId InProjectileId, const double dV, const FVector& InRicochetVector)
+	: FTBImpact(InHitResult, InVelocity, SurfaceType, InStartLocation, InInstigatingActor, Bullet.ProjectileSize, bIsRicochet, bIsPenetrating, 0.0, dV, InProjectileId, InRicochetVector)
+	, BulletProperties(Bullet.BulletProperties)
+	, BulletInfo(Bullet)
+{}
+
+FTBImpactParams::FTBImpactParams(const FHitResult& InHitResult, FTBBullet* Bullet, FVector InVelocity, bool bIsPenetrating, TEnumAsByte<EPhysicalSurface> SurfaceType, const FVector& InStartLocation, AActor* InInstigatingActor, bool bIsRicochet, const FTBProjectileId InProjectileId, const FVector& InRicochetVector)
+	: FTBImpact(InHitResult, InVelocity, SurfaceType, InStartLocation, InInstigatingActor, Bullet->ProjectileSize, bIsRicochet, bIsPenetrating, 0.0, 0.0, InProjectileId, InRicochetVector)
+	, BulletProperties(Bullet->BulletProperties)
+	, BulletInfo(Bullet)
+{}
+
+FTBImpactParams::FTBImpactParams(const FHitResult& InHitResult, FTBBullet* Bullet, FVector InVelocity, bool bIsPenetrating, TEnumAsByte<EPhysicalSurface> SurfaceType, const FVector& InStartLocation, AActor* InInstigatingActor, double PenetrationDepth, double dV, bool bIsRicochet, const FTBProjectileId InProjectileId, const FVector& InRicochetVector)
+	: FTBImpact(InHitResult, InVelocity, SurfaceType, InStartLocation, InInstigatingActor, Bullet->ProjectileSize, bIsRicochet, bIsPenetrating, PenetrationDepth, dV, InProjectileId, InRicochetVector)
+	, BulletProperties(Bullet->BulletProperties)
+	, BulletInfo(Bullet)
+{}
+
+bool FTBImpactParams::NetSerialize(FArchive& Ar, UPackageMap* Map, bool& bOutSuccess)
+{
+	FTBImpact::NetSerialize(Ar, Map, bOutSuccess);
+
+	Ar << BulletProperties;
+	Ar << BulletInfo;
+
+	return true;
+}

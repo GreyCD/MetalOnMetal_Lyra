@@ -1,0 +1,207 @@
+void UOnMetal_RangedWeaponAbility::HandleProjectileHit(const FTBImpactParams& ImpactParams,FGameplayTag ApplicationTag)
+{
+	UE_LOG(LogTemp, Warning, TEXT("HandleProjectileHit called. IsServer: %s"),
+		   GetOwningActorFromActorInfo()->HasAuthority() ? TEXT("True") : TEXT("False"));
+
+	UAbilitySystemComponent* MyAbilityComponent = CurrentActorInfo->AbilitySystemComponent.Get();
+	check(MyAbilityComponent);
+
+	UOnMetal_TBPayload* Payload = Cast<UOnMetal_TBPayload>(ImpactParams.Payload);
+	check(Payload);
+
+	// Update the custom target data with hit information
+	Payload->CustomTargetData.HitResult = ImpactParams.HitResult;
+	Payload->CustomTargetData.bHitReplaced = false;
+	Payload->CustomTargetData.ProjectileId = ImpactParams.ProjectileId;
+
+	// Create a new target data handle with our custom data
+	FGameplayAbilityTargetDataHandle TargetDataHandle;
+	TargetDataHandle.Add(new FOnMetal_GameplayAbilityTargetData_SingleHitTarget(Payload->CustomTargetData));
+
+	AController* Controller = GetControllerFromActorInfo();
+	check(Controller);
+    
+	UOnMetal_WeaponStateComponent* WeaponStateComponent = Controller->FindComponentByClass<UOnMetal_WeaponStateComponent>();
+	check(WeaponStateComponent);
+
+	TargetDataHandle.UniqueId = WeaponStateComponent->GetUnconfirmedServerSideHitMarkerCount();
+	
+	// Add unconfirmed server-side hit markers
+	TArray<FHitResult> FoundHits;
+	FoundHits.Add(ImpactParams.HitResult);
+	WeaponStateComponent->AddUnconfirmedServerSideHitMarkers(TargetDataHandle, FoundHits, true);
+
+	if (const FGameplayAbilitySpec* AbilitySpec = MyAbilityComponent->FindAbilitySpecFromHandle(CurrentSpecHandle))
+	{
+		FScopedPredictionWindow	ScopedPrediction(MyAbilityComponent);
+		// Create a local copy of the TargetDataHandle and transfer ownership
+		FGameplayAbilityTargetDataHandle LocalTargetDataHandle(MoveTemp(TargetDataHandle));
+		
+		const bool bShouldNotifyServer = CurrentActorInfo->IsLocallyControlled() && !CurrentActorInfo->IsNetAuthority();
+		if (bShouldNotifyServer)
+		{
+			MyAbilityComponent->CallServerSetReplicatedTargetData(CurrentSpecHandle,
+													CurrentActivationInfo.GetActivationPredictionKey(),
+													LocalTargetDataHandle, ApplicationTag,
+													MyAbilityComponent->ScopedPredictionKey);
+		}
+
+		const bool bIsTargetDataValid = true;
+
+#if WITH_SERVER_CODE
+		// We always want to confirm hits for projectile weapons, so we remove the !bProjectileWeapon check
+		if (Controller != nullptr)
+		{
+			if (Controller->GetLocalRole() == ROLE_Authority)
+			{
+				// Confirm hit markers
+				if (WeaponStateComponent != nullptr)
+				{
+					TArray<uint8> HitReplaces;
+					for (uint8 i = 0; (i < LocalTargetDataHandle.Num()) && (i < 255); ++i)
+					{
+						if (FOnMetal_GameplayAbilityTargetData_SingleHitTarget* SingleTargetHit = 
+							static_cast<FOnMetal_GameplayAbilityTargetData_SingleHitTarget*>(LocalTargetDataHandle.Get(i)))
+						{
+							if (SingleTargetHit->bHitReplaced)
+							{
+								HitReplaces.Add(i);
+							}
+						}
+					}
+
+					WeaponStateComponent->ClientConfirmTargetData(LocalTargetDataHandle.UniqueId, bIsTargetDataValid, HitReplaces);
+				}
+			}
+		}
+#endif //WITH_SERVER_CODE
+		
+		// Execute blueprint logic
+		BlueprintOnHit.ExecuteIfBound(ImpactParams, LocalTargetDataHandle);
+	}
+	
+	// We've processed the data
+	MyAbilityComponent->ConsumeClientReplicatedTargetData(CurrentSpecHandle, CurrentActivationInfo.GetActivationPredictionKey());
+
+	// Remove Projectile from the Projectile Payload Array
+	ProjectilePayloads.Remove(ImpactParams.ProjectileId);
+}
+
+
+void UOnMetal_RangedWeaponAbility::K2_FireProjectile(
+	FVector FireLocation, 
+	FRotator FireRotation, 
+	float ProjectileSpeed, 
+	float EffectiveRange,
+	TArray<AActor*> ActorsToIgnore,
+	FGameplayTag ApplicationTag,
+	FTBProjectileId& OutProjectileId,
+	UOnMetal_TBPayload*& OutPayload,
+	const FOnMetalProjectileCompleteDelegate& OnComplete,
+	const FOnMetalProjectileHitDelegate& OnHit,
+	const FOnMetalProjectileExitHitDelegate& OnExitHit,
+	const FOnMetalProjectileInjureDelegate& OnInjure)
+{
+	check(CurrentActorInfo);
+	if (!CommitAbility(CurrentSpecHandle, CurrentActorInfo, CurrentActivationInfo))
+	{
+		UE_LOG(LogTemp, Warning, TEXT("Weapon ability %s failed to commit"), *GetPathName());
+		K2_EndAbility();
+		return;
+	}
+
+	UOnMetal_RangedWeaponInstance* WeaponData = GetOnMetalWeaponInstance();
+	check(WeaponData);
+	WeaponData->AddSpread();
+
+	AActor* AvatarActor = CurrentActorInfo->AvatarActor.Get();
+	check(AvatarActor);
+
+	UAbilitySystemComponent* MyAbilityComponent = CurrentActorInfo->AbilitySystemComponent.Get();
+	check(MyAbilityComponent);
+
+	FScopedPredictionWindow ScopedPrediction(MyAbilityComponent, CurrentActivationInfo.GetActivationPredictionKey());
+
+	// Generate a unique projectile ID
+	OutProjectileId = FTBProjectileId::CreateNew();
+
+	const int32 CartridgeID = FMath::Rand();
+
+	// Create the payload
+	UOnMetal_TBPayload* Payload = NewObject<UOnMetal_TBPayload>();
+	Payload->SourceASC = GetAbilitySystemComponentFromActorInfo();
+	Payload->AbilityHandle = CurrentSpecHandle;
+	Payload->EffectContext = MakeEffectContext(CurrentSpecHandle, CurrentActorInfo);
+	Payload->OwningActor = GetOwningActorFromActorInfo();
+	Payload->ApplicationTag = ApplicationTag;
+
+	// Set up the custom target data
+	Payload->CustomTargetData.CartridgeID = CartridgeID; // Implement this in your weapon instance
+	Payload->CustomTargetData.SourceASC = GetAbilitySystemComponentFromActorInfo();
+	Payload->CustomTargetData.AbilityHandle = CurrentSpecHandle;
+	Payload->CustomTargetData.EffectContext = MakeEffectContext(CurrentSpecHandle, CurrentActorInfo);
+	Payload->CustomTargetData.ProjectileId = OutProjectileId;
+	
+
+	ProjectilePayloads.Add(OutProjectileId, Payload);
+
+	FCollisionQueryParams TraceParams;
+	ECollisionChannel TraceChannel = DetermineTraceChannel(TraceParams, false);
+
+	// Create launch params
+	FTBLaunchParams LaunchParams = UTerminalBallisticsStatics::MakeLaunchParams(
+		ProjectileSpeed,
+		EffectiveRange,
+		1.0f, // Timescale
+		FireLocation,
+		FireRotation,
+		ActorsToIgnore,
+		UTerminalBallisticsStatics::GetDefaultObjectTypes(),
+		TraceChannel,
+		true, // bIgnoreOwner
+		true, // bAddToOwnerVelocity
+		false, // bForceNoTracer
+		GetOwningActorFromActorInfo(),
+		GetControllerFromActorInfo(),
+		1.0f, // GravityMultiplier
+		10.0f, // OwnerIgnoreDistance
+		25.0f, // TracerActivationDistance
+		Payload
+	);
+
+	ProjectileDataAsset = WeaponData->GetBulletDataAssetPtr();
+	check(ProjectileDataAsset)
+
+	// Store the Blueprint-bound delegates
+	BlueprintOnComplete = OnComplete;
+	BlueprintOnHit = OnHit;
+	BlueprintOnExitHit = OnExitHit;
+	BlueprintOnInjure = OnInjure;
+
+	FBPOnProjectileComplete WrappedOnComplete;
+	WrappedOnComplete.BindUFunction(this, FName("HandleProjectileComplete"));
+
+	FBPOnBulletHit WrappedOnHit;
+	WrappedOnHit.BindUFunction(this, FName("HandleProjectileHit"));
+
+	FBPOnBulletExitHit WrappedOnExitHit;
+	WrappedOnExitHit.BindUFunction(this, FName("HandleProjectileExitHit"));
+
+	FBPOnBulletInjure WrappedOnInjure;
+	WrappedOnInjure.BindUFunction(this, FName("HandleProjectileInjure"));
+
+	UTerminalBallisticsStatics::AddAndFireBulletWithCallbacks(
+	ProjectileDataAsset,
+	LaunchParams,
+	WrappedOnComplete,
+	WrappedOnHit,
+	WrappedOnExitHit,
+	WrappedOnInjure,
+	OutProjectileId,
+	2 // DebugType
+);
+
+	// Set the out payload
+	OutPayload = Payload;
+}
+
